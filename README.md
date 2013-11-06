@@ -1,24 +1,20 @@
 # Nyaaaaa
 
-TODO: Write a gem description
+Cats fix everything in your life.
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'nyaaaaa'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
 
     $ gem install nyaaaaa
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ nyaaaaa
+    
+And you will be satisfied.
+
+To update image info:
+
+    $ nyaaaaa update
 
 ## Contributing
 
