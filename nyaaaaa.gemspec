@@ -24,4 +24,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "nokogiri"
   spec.add_development_dependency "addressable"
   spec.add_development_dependency "launchy"
+  spec.add_development_dependency "thor"
 end

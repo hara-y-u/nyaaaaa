@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+require 'nyaaaaa'
+require 'launchy'
+require 'thor'
+
+class CLI < Thor
+  desc 'nyaaaaa', 'Nyaaaaaaaaaaaaaaaaaaaaaaaaaaaa!'
+  def nyaaaaa
+    Launchy.open Nyaaaaa.random_url
+  end
+  default_task :nyaaaaa
+end
+
+CLI.start
