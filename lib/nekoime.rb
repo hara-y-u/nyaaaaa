@@ -43,7 +43,7 @@ module Nekoime
       end
     end
 
-    def fetch_latest_id
+    def get_latest_id
       scrape_latest_id(*get_html)
     end
 
