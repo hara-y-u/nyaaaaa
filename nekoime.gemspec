@@ -21,6 +21,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
-  spec.add_development_dependency "nokogiri", "~> 1.6.0"
+  spec.add_development_dependency "nokogiri"
   spec.add_development_dependency "addressable"
+  spec.add_development_dependency "launchy"
 end
