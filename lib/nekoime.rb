@@ -6,7 +6,7 @@ require 'nokogiri'
 
 module Nekoime
   BASE_URL = "http://ねこ画像.net/"
-  PAGE_PATH_TMPL = "neko%5_DIGITS_ID%"
+  PAGE_PATH_TMPL = "neko%05d"
   XPATH_LATEST_LINK = '//*[@id="content"]/div[1]/a'
   GEM_ROOT = Gem::Specification.find_by_name('nekoime').gem_dir
 
@@ -74,7 +74,12 @@ module Nekoime
       IO.read(latest_id_cache_path).to_i
     end
 
+    def url_with_id(id)
+      BASE_URL + sprintf(PAGE_PATH_TMPL, id) + '/'
+    end
+
     def latest_url
+      BASE_URL + sprintf(PAGE_PATH_TMPL, latest_id)
     end
 
     def random_url
