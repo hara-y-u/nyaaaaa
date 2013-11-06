@@ -7,6 +7,7 @@ require 'nokogiri'
 module Nekoime
   BASE_URL = Addressable::URI.parse("http://ねこ画像.net/")
   XPATH_LATEST_LINK = '//*[@id="content"]/div[1]/a'
+  GEM_ROOT = Gem::Specification.find_by_name('nekoime').gem_dir
 
   class RequestError < StandardError
   end
@@ -14,7 +15,7 @@ module Nekoime
   end
 
   module ModuleMethods
-    def latest_id
+    def fetch_latest_id
       begin
         url = Addressable::URI.parse(BASE_URL)
 
@@ -39,7 +40,19 @@ module Nekoime
       end
     end
 
-    def save_latest_id
+    def var_dir
+      File.join GEM_ROOT, 'var'
+    end
+
+    def latest_id_cache_path
+      File.join var_dir, 'latest_id'
+    end
+
+    def save_latest_id(id)
+      unless File.exists? var_dir
+        FileUtils.mkdir var_dir
+      end
+      IO.write(latest_id_cache_path, id.to_s)
     end
 
     def latest_url
