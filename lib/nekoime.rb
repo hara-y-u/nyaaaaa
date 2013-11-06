@@ -79,10 +79,11 @@ module Nekoime
     end
 
     def latest_url
-      BASE_URL + sprintf(PAGE_PATH_TMPL, latest_id)
+      url_with_id latest_id
     end
 
     def random_url
+      url_with_id Random.rand(1..latest_id)
     end
   end
 
