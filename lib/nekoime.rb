@@ -5,7 +5,7 @@ require 'open-uri'
 require 'nokogiri'
 
 module Nekoime
-  BASE_URL = Addressable::URI.parse("http://ねこ画像.net/")
+  BASE_URL = "http://ねこ画像.net/"
   XPATH_LATEST_LINK = '//*[@id="content"]/div[1]/a'
   GEM_ROOT = Gem::Specification.find_by_name('nekoime').gem_dir
 
