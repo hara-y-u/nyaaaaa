@@ -16,7 +16,7 @@ module Nekoime
   end
 
   module ModuleMethods
-    def get_html
+    def get_index_html
       begin
         url = Addressable::URI.parse(BASE_URL)
 
@@ -45,7 +45,7 @@ module Nekoime
     end
 
     def get_latest_id
-      scrape_latest_id(*get_html)
+      scrape_latest_id(*get_index_html)
     end
 
     def var_dir
