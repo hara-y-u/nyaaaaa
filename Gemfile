@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in nekoime.gemspec
+# Specify your gem's dependencies in nyaaaaa.gemspec
 gemspec

@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-require "nekoime/version"
+require "nyaaaaa/version"
 require 'addressable/uri'
 require 'open-uri'
 require 'nokogiri'
 
-module Nekoime
+module Nyaaaaa
   BASE_URL = "http://ねこ画像.net/"
   PAGE_PATH_TMPL = "neko%05d"
   XPATH_LATEST_LINK = '//*[@id="content"]/div[1]/a'
-  GEM_ROOT = Gem::Specification.find_by_name('nekoime').gem_dir
+  GEM_ROOT = Gem::Specification.find_by_name('nyaaaaa').gem_dir
 
   class RequestError < StandardError
   end

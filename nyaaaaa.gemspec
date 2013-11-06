@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'nekoime/version'
+require 'nyaaaaa/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "nekoime"
-  spec.version       = Nekoime::VERSION
+  spec.name          = "nyaaaaa"
+  spec.version       = Nyaaaaa::VERSION
   spec.authors       = ["yukihiro hara"]
   spec.email         = ["yukihr@gmail.com"]
   spec.description   = %q{Cats fix everything in your life.}
