@@ -62,6 +62,10 @@ module Nekoime
       IO.write(latest_id_cache_path, id.to_s)
     end
 
+    def fetch_latest_id
+      save_latest_id(get_latest_id)
+    end
+
     def latest_url
     end
 
