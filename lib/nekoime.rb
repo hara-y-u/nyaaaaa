@@ -15,7 +15,7 @@ module Nekoime
   end
 
   module ModuleMethods
-    def fetch_latest_id
+    def get_html
       begin
         url = Addressable::URI.parse(BASE_URL)
 
@@ -24,10 +24,13 @@ module Nekoime
           charset = f.charset
           f.read
         end
+        [html, charset]
       rescue
         raise RequestError, "Request to #{BASE_URL} has failed."
       end
+    end
 
+    def scrape_latest_id(html, charset)
       begin
         doc = Nokogiri::HTML.parse(html, nil , charset)
         href = nil
@@ -38,6 +41,10 @@ module Nekoime
       rescue
         raise ParseError, "Parsing response HTML has failed."
       end
+    end
+
+    def fetch_latest_id
+      scrape_latest_id(*get_html)
     end
 
     def var_dir

@@ -1,7 +1,7 @@
 require 'nekoime'
 
 describe Nekoime do
-  describe 'request_latest_id' do
+  describe 'fetch_latest_id' do
     it 'should get fetch_latest_id' do
       Nekoime.fetch_latest_id.should be_an_instance_of(Fixnum)
     end
