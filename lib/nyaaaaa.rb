@@ -64,7 +64,9 @@ module Nyaaaaa
     end
 
     def fetch_latest_id
-      save_latest_id(get_latest_id)
+      id = get_latest_id
+      save_latest_id(id)
+      id
     end
 
     def latest_id
