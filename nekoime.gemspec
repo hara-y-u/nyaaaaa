@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Nekoime::VERSION
   spec.authors       = ["yukihiro hara"]
   spec.email         = ["yukihr@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{Cats fix everything in your life.}
+  spec.summary       = %q{You need cat image.}
+  spec.homepage      = "http://yukihr.github.io"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
