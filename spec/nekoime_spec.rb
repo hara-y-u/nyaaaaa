@@ -21,4 +21,10 @@ describe Nekoime do
       IO.read(Nekoime.latest_id_cache_path).should eq('2048')
     end
   end
+
+  describe 'latest_id' do
+    it 'should return latest id' do
+      Nekoime.latest_id.should be_an_instance_of(Fixnum)
+    end
+  end
 end

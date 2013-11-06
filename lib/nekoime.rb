@@ -6,6 +6,7 @@ require 'nokogiri'
 
 module Nekoime
   BASE_URL = "http://ねこ画像.net/"
+  PAGE_PATH_TMPL = "neko%5_DIGITS_ID%"
   XPATH_LATEST_LINK = '//*[@id="content"]/div[1]/a'
   GEM_ROOT = Gem::Specification.find_by_name('nekoime').gem_dir
 
@@ -64,6 +65,13 @@ module Nekoime
 
     def fetch_latest_id
       save_latest_id(get_latest_id)
+    end
+
+    def latest_id
+      unless File.exists? latest_id_cache_path
+        fetch_latest_id
+      end
+      IO.read(latest_id_cache_path).to_i
     end
 
     def latest_url
